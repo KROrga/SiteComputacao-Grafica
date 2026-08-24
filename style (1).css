@@ -1,0 +1,901 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #7188A8;
+
+    color: #0f0f0f;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   VARIÁVEIS
+========================= */
+
+:root {
+
+    --primary: #0f0f0f;
+
+    --secondary: #000000;
+
+    --accent: #42C99F;
+
+    --accent-light: #e7a06e;
+
+    --paper: #000000;
+
+    --border: #303030;
+
+    --shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+
+    width: min(1100px, 92%);
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background: #576578;
+}
+
+
+.hero-content {
+
+    max-width: 850px;
+}
+
+
+.hero-tag {
+
+    display: inline-block;
+
+    border: 2px solid var(--border);
+
+    padding: 5px 18px;
+
+    border-radius: 30px;
+
+    font-size: .85rem;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 {
+
+    font-size: clamp(3rem, 9vw, 7rem);
+
+    line-height: .9;
+
+    text-transform: uppercase;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 span {
+
+    color: var(--accent);
+}
+
+
+.hero p {
+
+    font-size: 1.2rem;
+
+    color: var(--secondary);
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+
+.scroll-button {
+
+    margin-top: 40px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: white;
+
+    background: var(--primary);
+
+    text-decoration: none;
+
+    padding: 13px 24px;
+
+    border-radius: 5px;
+
+    transition: .3s;
+}
+
+
+.scroll-button:hover {
+
+    background: var(--accent);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+section {
+
+    padding: 90px 0;
+}
+
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+
+.section-title span {
+
+    display: block;
+
+    font-size: .8rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    color: var(--accent);
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+.section-title h2 {
+
+    font-size: clamp(2rem, 5vw, 3.4rem);
+}
+
+
+.section-title p {
+
+    max-width: 650px;
+
+    margin: 15px auto 0;
+
+    color: var(--secondary);
+}
+
+
+/* =========================
+   INTRODUÇÃO
+========================= */
+
+.intro {
+
+    background: #333647;
+}
+
+
+.intro-box {
+
+    border: 2px solid var(--border);
+
+    padding: 45px;
+
+    border-radius: 8px;
+
+    position: relative;
+
+    background: white;
+
+    box-shadow: var(--shadow);
+}
+
+
+.intro-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 80px;
+
+    height: 4px;
+
+    background: var(--accent);
+
+    top: -2px;
+
+    left: 40px;
+}
+
+
+.intro-box h3 {
+
+    font-size: 1.7rem;
+
+    margin-bottom: 15px;
+}
+
+
+.intro-box p {
+
+    color: #555;
+
+    max-width: 850px;
+}
+
+
+/* =========================
+   PAPÉIS
+========================= */
+
+.roles {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.role-card {
+
+    background: #9AA5AD;
+
+    display: inline-block;
+  
+    border: 2px solid var(--border);
+
+    border-radius: 8px;
+
+    padding: 10px;
+
+    text-align: center;
+
+    transition: .3s;
+}
+
+
+.role-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow);
+
+    border-color: var(--accent);
+}
+
+
+.role-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    margin: 0 auto 18px;
+
+    border: 2px solid var(--border);
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 1.5rem;
+
+    background: #faf8f3;
+}
+
+
+.role-card h3 {
+
+    margin-bottom: 8px;
+}
+
+
+.role-card p {
+
+    color: var(--secondary);
+
+    font-size: .9rem;
+}
+
+
+/* =========================
+   FUNÇÕES
+========================= */
+
+.functions {
+
+    background: #292929;
+
+    color: white;
+}
+
+
+.functions .section-title p {
+
+    color: #bbb;
+}
+
+
+.function-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.function-card {
+
+    border: 1px solid #666;
+
+    border-radius: 50%;
+
+    width: 180px;
+
+    height: 180px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    transition: .3s;
+}
+
+
+.function-card:hover {
+
+    background: var(--accent);
+
+    border-color: var(--accent);
+
+    transform: scale(1.08);
+}
+
+
+.function-card h3 {
+
+    font-size: 1rem;
+}
+
+
+/* =========================
+   ENGINE
+========================= */
+
+.engine {
+
+    background: var(--paper);
+}
+
+
+.engine-content {
+
+    display: grid;
+
+    grid-template-columns: 1fr 2fr;
+
+    gap: 35px;
+
+    align-items: center;
+}
+
+
+.engine-circle {
+
+    width: 250px;
+
+    height: 250px;
+
+    margin: auto;
+
+    border: 3px solid var(--border);
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    text-align: center;
+
+    background: white;
+
+    box-shadow: var(--shadow);
+
+    position: relative;
+}
+
+
+.engine-circle::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 275px;
+
+    height: 275px;
+
+    border: 1px dashed var(--accent);
+
+    border-radius: 50%;
+}
+
+
+.engine-circle strong {
+
+    font-size: 1.7rem;
+}
+
+
+.engine-box {
+
+    background: white;
+
+    border: 2px solid var(--border);
+
+    border-radius: 8px;
+
+    padding: 35px;
+}
+
+
+.engine-box h3 {
+
+    font-size: 1.8rem;
+
+    margin-bottom: 15px;
+}
+
+
+.engine-box p {
+
+    color: var(--secondary);
+
+    margin-bottom: 20px;
+}
+
+
+.capabilities {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.capability {
+
+    padding: 8px 15px;
+
+    border-radius: 30px;
+
+    border: 1px solid var(--border);
+
+    font-size: .85rem;
+
+    background: #fafafa;
+}
+
+
+/* =========================
+   JOGOS
+========================= */
+
+.games-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.game-card {
+
+    min-height: 230px;
+
+    background: white;
+
+    border: 2px solid var(--border);
+
+    border-radius: 8px;
+
+    padding: 28px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: .3s;
+}
+
+
+.game-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow);
+}
+
+
+.game-number {
+
+    position: absolute;
+
+    top: -15px;
+
+    right: 10px;
+
+    font-size: 6rem;
+
+    color: #eee;
+
+    font-weight: bold;
+}
+
+
+.game-card h3,
+.game-card p {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.game-card h3 {
+
+    margin-bottom: 12px;
+
+    font-size: 1.4rem;
+}
+
+
+.game-card p {
+
+    color: var(--secondary);
+}
+
+
+/* =========================
+   COMPARAÇÃO
+========================= */
+
+.comparison {
+
+    background: #ebe8e1;
+}
+
+
+.comparison-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 30px;
+}
+
+
+.comparison-box {
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 8px;
+
+    border: 2px solid var(--border);
+}
+
+
+.comparison-box h3 {
+
+    margin-bottom: 20px;
+
+    font-size: 1.6rem;
+}
+
+
+.comparison-box ul {
+
+    list-style: none;
+}
+
+
+.comparison-box li {
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+.comparison-box li:last-child {
+
+    border-bottom: none;
+}
+
+
+.advantages {
+
+    border-top: 5px solid #4b8c4b;
+}
+
+
+.advantages h3 {
+
+    color: #4b8c4b;
+}
+
+
+.disadvantages {
+
+    border-top: 5px solid #c24c4c;
+}
+
+
+.disadvantages h3 {
+
+    color: #c24c4c;
+}
+
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
+.info-section {
+
+    padding-top: 30px;
+}
+
+
+.info-card {
+
+    width: min(350px, 100%);
+
+    margin-left: auto;
+
+    background: white;
+
+    border: 2px solid var(--border);
+
+    border-radius: 5px;
+
+    padding: 25px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.info-card h3 {
+
+    border-bottom: 2px solid var(--border);
+
+    padding-bottom: 10px;
+
+    margin-bottom: 15px;
+}
+
+
+.info-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 8px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+.info-row span:last-child {
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: var(--primary);
+
+    color: white;
+
+    padding: 45px 0;
+
+    text-align: center;
+}
+
+
+footer p {
+
+    color: #aaa;
+
+    margin-top: 8px;
+}
+
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+    .roles,
+    .function-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .engine-content {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .games-grid {
+
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    section {
+
+        padding: 60px 0;
+    }
+
+
+    .roles,
+    .function-grid,
+    .comparison-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .function-card {
+
+        width: 160px;
+
+        height: 160px;
+    }
+
+
+    .intro-box,
+    .engine-box,
+    .comparison-box {
+
+        padding: 25px;
+    }
+
+
+    .engine-circle {
+
+        width: 200px;
+
+        height: 200px;
+    }
+
+
+    .engine-circle::after {
+
+        width: 225px;
+
+        height: 225px;
+    }
+}
